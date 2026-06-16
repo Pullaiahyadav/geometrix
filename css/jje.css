@@ -1,0 +1,445 @@
+/* GLOBAL */
+
+a.download-button,
+input.download-button,
+button.download-button,
+p button.download-button,
+p input.download-button
+{
+	padding: 8px 18px 9px 32px !important;
+	_padding: 8px 18px 8px 32px !important;
+	/* *padding: 8px 18px 8px 32px !important; */
+	text-decoration: none !important;
+}
+
+area:hover
+{
+    border:1px solid black;
+	opacity:.5;
+}
+
+#wrapper	{
+		
+	width: 800px;
+	height: 650px;
+	padding: 0px 20px 0 8px;
+	background-color: #fff;	
+	border: #F05A28 solid 5px;
+	
+}
+
+#superwrap	{
+	width:800px;
+	margin-left: auto;
+	margin-right: auto;
+		
+		
+}
+
+body {
+	
+	background:url(../images/background.jpg) repeat-x fixed center top #141414;
+	color:#4c4c4c;	
+	font-family: Helvetica,Arial;
+	font-size:14px;
+			
+}
+
+.head_logo {
+
+        float:left;
+        padding: 15px 0 0 70px;
+	font: 10px Verdana;
+	text-align: center;
+	color: #000;
+}
+
+.rightheader	{
+	float: right;
+	padding-top:0px;
+}
+
+
+.photo 	{
+	border: 1px solid #bbb;
+	padding: 1px;
+}
+
+
+
+.photo a:hover {
+	opacity:0.8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
+}
+
+
+
+.footer	{
+	font: 9px Verdana;
+	position: relative;
+	color: #fff;
+}
+
+
+.footer a {
+	font:9px Verdana;
+	color:#F05A28;
+}
+
+.footer a:hover	{
+	text-decoration: underline;
+	color:#fff;	
+}
+
+
+
+.search_box	{
+	font: 10px Verdana;
+	padding: 10px 20px 0 0;
+	display:inline;
+}
+
+.checkout a	{
+	
+
+	font: bold 12px Helvetica,Arial;
+	color: #4D4D4D;
+	padding: 0 0px 0 20px;
+	text-decoration: none;
+	
+}
+
+.checkout a:hover	{
+	text-decoration: underline;
+	color: #4D4D4D;
+		
+}
+
+.cart a	{
+	float: left;
+	padding: 5px 0 0 0px;
+	font: bold 18px Helvetica,Arial;
+	text-decoration: none;
+	color: #F05A28;
+	
+
+}
+
+.cart a:hover	{
+	text-decoration: underline;
+	color: #F05A28;
+	
+}
+
+
+#menu	{
+	width: 1000px;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	/* #margin-top: 0px; */
+	float: left;
+}
+
+.button   {
+	border:#4D4D4D solid;
+	color:#4D4D4D;
+	font-weight:bold;
+}
+
+.button:hover	{
+	color:#F05A28;
+	border:#F05A28 solid;
+}
+
+.button2	{
+	border:3px #4D4D4D solid;
+	background-color:#f0f0f0;
+	font:bold 10px Verdana;
+	color:#4D4D4D;
+	padding:1px 10px 1px 10px;
+	text-decoration:none;
+}
+
+.button2:hover {
+
+color:#F05A28;
+border:3px #F05A28 solid;
+}
+
+
+/* CATEGORY AND PRODUCT */
+
+
+.category	{
+	font:28px Helvetica,Arial;
+	color:#F05A28;
+}
+
+.category a:link	{
+	font:28px Helvetica,Arial;
+	color:#F05A28;
+	text-decoration: none;
+}
+
+.category a:visited	{
+	font:28px Helvetica,Arial;
+	color:#F05A28;
+	text-decoration: none;
+}
+
+
+.category a:hover	{
+		font:28px Helvetica,Arial;
+	color:#4D4D4D;
+	text-decoration:underline;
+}
+
+
+.categorypage	{
+	margin-top: 10px;
+	
+}
+
+.search_content_inner {
+
+	border-bottom: 0px none; 
+	width: 130px;
+
+}
+
+
+.search_title  {
+
+	color: #4D4D4D; 
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Helvetica,Arial;
+	font-size:18px;
+
+}
+
+.search_title a {
+
+	color: #4D4D4D; 
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Helvetica,Arial;
+
+}
+
+.search_title a:hover {
+
+	color: #F05A28; 
+	font-weight: bold;
+	text-decoration: underline;	
+	font-family: Helvetica,Arial;
+
+}
+
+.special	{
+	color: #4D4D4D;
+	font: 10px Verdana;
+		
+}
+
+.special a:hover {
+
+	color: #F05A28; 
+	font: 10px Verdana;
+	text-decoration: underline;	
+
+}
+
+.product	{
+	width:350px;
+	margin-right:5px;
+	margin-left:70px;
+}	
+
+.description	{
+	font: 16px Helvetica,Arial;
+	font-weight: bold;
+	color: #F05A28;
+	width:300px;
+	margin-top:100px;
+	
+	
+}
+
+
+.textinput { /* For form fields */
+	border: 2px solid #4D4D4D;
+	background: #4D4D4D;
+	color: #fff;
+	font: 14px Verdana;
+}
+
+.form	{
+	font: 18px Verdana;
+}
+
+
+
+/* SHOPPING CART  */
+
+
+empty.a	{
+	color: #4D4D4D; 
+	font: 24px Verdana bold;
+	text-decoration: none;
+	float: right;
+}
+
+.empty a {
+	color: #F05A28; 
+	font: 16px Verdana bold;
+	text-decoration: underline;
+}
+
+.cartHeaders{
+    display: block !important;
+	float: left !important;
+	clear: both !important;
+    width: 700px  !important;
+	background-color: #fbecbe;
+}
+
+.itemContainer{
+    display: block !important;
+    float: left !important;
+	clear: both !important;
+	width: 100% !important;
+	padding: 0 0 0 0px;
+	background-color: #fff9e8;
+}
+
+.simpleCart_items div div {
+    display: block !important;
+    float: left !important;
+	clear: none  !important;
+    width: 20%;
+    padding: 5px !important;
+} 
+
+.itemName	{
+
+	display: inline;
+	font: bold 12px Verdana;
+	color: #F05A28;
+	padding: 0 0 0 0px;
+	width:30% !important;
+	text-decoration: none;
+}
+
+.itemPrice {
+
+	display: inline;
+	font: bold 12px Verdana;
+	color: #F05A28;
+	padding: 0 0 0 0px;
+	width:20%;
+	text-decoration: none;
+}
+
+.itemQuantity {
+
+	display: inline;
+	font: bold 12px Verdana;
+	color: #F05A28;
+	padding: 0 0 0 0px;
+	width:10%;
+	text-decoration: none;
+}
+
+.itemTotal {
+
+	display: inline;
+	font: bold 12px Verdana;
+	color: #F05A28;
+	padding: 2px 0 0 2px;
+	width:10%;
+	text-decoration: none;
+}
+
+.simpleCart_total {
+
+	padding: 10px 0 0 0;
+}
+
+
+
+
+/* 
+
+	SEARCHFIELD CSS
+	by Alen Grakalic, brought to you by cssglobe.com
+	
+*/
+
+/* default (inactive field) */
+.sf_inactive{
+	border:2px #4D4D4D solid;
+	background:#fff;
+	color:#000;
+}
+/* on focus (when field is clicked on)  */
+.sf_active{
+	border:2px #F05A28 solid;
+	background:#fff;
+	color:#333;
+}
+/* with text (when field is inactive but contains user's input)  */
+.sf_text{
+	border:2px #F05A28 solid;
+	background:#fff;
+	color:#888;
+}
+
+/* suggestions box */
+/* js code generates unordered list */
+
+.sf_suggestion{
+	position:relative;
+}
+.sf_suggestion ul{
+	position:absolute;
+	margin:0;
+	padding:0;
+	background:#f0f0f0;
+	top:0;
+	left:0;
+	
+}
+.sf_suggestion li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	
+}
+.sf_suggestion li a{
+	display:block;
+	text-indent:5px;
+	color:#000;
+}
+.sf_suggestion li.selected a{
+	background:#F05A28;
+	color: #fff;
+	
+}
+
+/* Site Map */
+
+.link a {
+	color:#F05A28;
+}
+
+/* Home Page Image Map */
+
+#map a:hover {
+	opacity:0.5;
+}
+
+
+
