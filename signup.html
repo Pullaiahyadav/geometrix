@@ -1,0 +1,357 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!--Place DTM header below this-->
+    <script src="https://assets.adobedtm.com/091296e21369/0bfdfe414e0c/launch-ea04ad1ac377-development.min.js" async></script>
+    <!--Place DTM header above this-->
+
+    <script src="scripts/auth.js"></script>
+    <script>
+        window.adobeDataLayer = window.adobeDataLayer || [];
+        window.adobeDataLayer.push({
+          event: "pageView",
+          page: {
+            pageName: "Signup",
+            pageUrl: window.location.href,
+            pageType: "content",
+            language: "en",
+            pageCategory: "Signup",
+            SiteSection1: "Signup",
+            siteSection2: "",
+            siteSection3: "",
+            referrer: document.referrer,
+            is404: false,
+          },
+          user: GeoAuth.getUserDataLayer()
+        });
+    </script>
+
+    <title>Sign Up - Geometrixx Clothiers</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/simpleCart.js"></script>
+
+    <link rel="stylesheet" href="css/jje.css">
+    <link rel="stylesheet" href="css/menu.css">
+
+    <style>
+        .signup-form {
+            margin: 10px 0 20px 20px;
+            max-width: 500px;
+        }
+        .signup-form table {
+            width: 100%;
+        }
+        .signup-form td {
+            padding: 6px 4px;
+            vertical-align: top;
+        }
+        .signup-form .label-cell {
+            width: 140px;
+            text-align: right;
+            padding-right: 10px;
+            font: bold 14px Helvetica, Arial;
+            color: #4D4D4D;
+        }
+        .signup-form input[type="text"],
+        .signup-form input[type="email"],
+        .signup-form input[type="password"],
+        .signup-form input[type="tel"],
+        .signup-form textarea,
+        .signup-form select {
+            width: 100%;
+            padding: 6px 8px;
+            border: 2px solid #4D4D4D;
+            background: #4D4D4D;
+            color: #fff;
+            font: 14px Verdana;
+            box-sizing: border-box;
+        }
+        .signup-form select {
+            appearance: auto;
+        }
+        .signup-form textarea {
+            height: 60px;
+            resize: vertical;
+        }
+        .signup-msg {
+            font: 16px Verdana;
+            margin: 10px 0 0 20px;
+            min-height: 24px;
+        }
+        .signup-msg.success { color: #2e7d32; }
+        .signup-msg.error { color: #c62828; }
+        .required-star { color: #F05A28; font-weight: bold; }
+    </style>
+</head>
+
+<body>
+    <div id="superwrap">
+        <div id="wrapper">
+            <!--start logo and head-->
+            <div class="head_logo">
+                <a href="index.html"><img src="./images/geomterixx-logo.png" border="0" name="jj" /></a>
+                <br />
+            </div>
+
+            <!--start search box-->
+            <div class="rightheader">
+                <span class="search_box">
+                    <form action="search/searchresults.html">
+                        <input type="text" id="searchfield" name="q" />
+                        <input type="submit" Value="Go" class="button">
+                    </form>
+                </span>
+                <div class="checkout">
+                    <a href="checkout/shoppingcart.html">shopping cart</a>
+                    <a href="checkout/shipping1.html">checkout</a>
+                    <a href="videoblogs/videoblogs.html">video blogs</a>
+                    <a href="login.html">login</a>
+                    <a href="signup.html">sign up</a>
+                </div>
+            </div>
+            <!--end search box-->
+
+            <!--start top nav-->
+            <table width=800>
+                <tr>
+                    <div class="head_tabs_bar">
+                        <div id="menu">
+                            <ul id="sddm">
+                                <li><a href="women/women.html" onmouseover="mopen('m2')" onmouseout="mclosetime()">WOMEN</a>
+                                    <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="women/activewear/activewear.html">Activewear</a>
+                                        <a href="women/fineapparel/fineapparel.html">Fine Apparel</a>
+                                        <a href="#">Footwear</a>
+                                        <a href="#">Handbags</a>
+                                    </div>
+                                </li>
+                                <li><a href="men/men.html" onmouseover="mopen('m3')" onmouseout="mclosetime()">MEN</a>
+                                    <div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="men/activewear/activewear.html">Activewear</a>
+                                        <a href="men/fineapparel/fineapparel.html">Fine Apparel</a>
+                                        <a href="#">Footwear</a>
+                                        <a href="#">Accessories</a>
+                                    </div>
+                                </li>
+                                <li><a href="#" onmouseover="mopen('m4')" onmouseout="mclosetime()">JEWELRY</a>
+                                    <div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="#">Anniversary</a>
+                                        <a href="#">Broaches</a>
+                                        <a href="#">Forgive Me</a>
+                                        <a href="#">Necklaces</a>
+                                        <a href="#">Rings</a>
+                                        <a href="#">Watches</a>
+                                    </div>
+                                </li>
+                                <li><a href="#" onmouseover="mopen('m5')" onmouseout="mclosetime()">HOME</a>
+                                    <div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="#">Artwork</a>
+                                        <a href="#">Bed & Bath</a>
+                                        <a href="#">Chotskies</a>
+                                        <a href="#">Floor Clocks</a>
+                                        <a href="#">Furniture</a>
+                                        <a href="#">Gourmet Food</a>
+                                        <a href="#">Home Scents</a>
+                                        <a href="#">Kitchen</a>
+                                        <a href="#">Lighting</a>
+                                        <a href="#">Patio & Garden</a>
+                                        <a href="#">Wall Decor</a>
+                                    </div>
+                                </li>
+                                <li><a href="#" onmouseover="mopen('m6')" onmouseout="mclosetime()">CHILDREN</a>
+                                    <div id="m6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="#">Accessories</a>
+                                        <a href="#">Apparel</a>
+                                        <a href="#">Bed & Bath</a>
+                                        <a href="#">Shoes</a>
+                                        <a href="#">Toys</a>
+                                    </div>
+                                </li>
+                                <li><a href="#" onmouseover="mopen('m7')" onmouseout="mclosetime()">ELECTRONICS</a>
+                                    <div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="#">Audio</a>
+                                        <a href="#">Cameras</a>
+                                        <a href="#">Computers</a>
+                                        <a href="#">Gadgets</a>
+                                        <a href="#">Home Appliance</a>
+                                        <a href="#">Home Theater</a>
+                                        <a href="#">TV & Video</a>
+                                    </div>
+                                    <li><a href="company/company.html" onmouseover="mopen('m8')" onmouseout="mclosetime()">COMPANY</a>
+                                        <div id="m8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                            <a href="company/chargecard_application1.html">Geo Charge Card</a>
+                                            <a href="company/travel1.html">Geo Travel</a>
+                                            <a href="company/newsletter1.html">Geo Newsletter</a>
+                                            <a href="company/activation_dtm.html">Activation (DTM)</a>
+                                            <a href="company/whitepapers.html">White Papers</a>
+                                        </div>
+                                    </li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <br clear="all">
+                </tr>
+            </table>
+            <!--end top nav-->
+
+            <!--start page content-->
+            <div style="margin:6px 0px 0px -3px;">
+                <span class="description">Sign Up for Geometrixx</span>
+                <br /><br />
+
+                <div class="signup-form">
+                    <form id="signupForm" onsubmit="return handleSignup(event);">
+                        <table>
+                            <tr>
+                                <td class="label-cell">Username <span class="required-star">*</span></td>
+                                <td><input type="text" id="su_username" name="username" required /></td>
+                            </tr>
+                            <tr>
+                                <td class="label-cell">Full Name <span class="required-star">*</span></td>
+                                <td><input type="text" id="su_fullName" name="fullName" required /></td>
+                            </tr>
+                            <tr>
+                                <td class="label-cell">Email <span class="required-star">*</span></td>
+                                <td><input type="email" id="su_email" name="email" required /></td>
+                            </tr>
+                            <tr>
+                                <td class="label-cell">Password <span class="required-star">*</span></td>
+                                <td><input type="password" id="su_password" name="password" required minlength="6" /></td>
+                            </tr>
+                            <tr>
+                                <td class="label-cell">Phone Number</td>
+                                <td><input type="tel" id="su_phone" name="phone" /></td>
+                            </tr>
+                            <tr>
+                                <td class="label-cell">Customer Type</td>
+                                <td>
+                                    <select id="su_customerType" name="customerType">
+                                        <option value="consumer" selected>Consumer</option>
+                                        <option value="business">Business</option>
+                                        <option value="wholesale">Wholesale</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-cell">Loyalty Status</td>
+                                <td>
+                                    <select id="su_loyaltyStatus" name="loyaltyStatus">
+                                        <option value="guest" selected>Guest</option>
+                                        <option value="member">Member</option>
+                                        <option value="premium">Premium</option>
+                                        <option value="vip">VIP</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-cell">Address</td>
+                                <td><textarea id="su_address" name="address"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td class="label-cell">City</td>
+                                <td><input type="text" id="su_city" name="city" /></td>
+                            </tr>
+                            <tr>
+                                <td class="label-cell">Country</td>
+                                <td>
+                                    <select id="su_country" name="country">
+                                        <option value="US" selected>United States</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="FR">France</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="IN">India</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="MX">Mexico</option>
+                                        <option value="OTHER">Other</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td style="padding-top:10px;">
+                                    <input type="submit" value="Sign Up" class="button" style="padding:6px 20px; font-size:14px;" />
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+
+                <div class="signup-msg" id="signupMsg"></div>
+
+                <p style="margin-left:20px; font:14px Helvetica,Arial; color:#4D4D4D;">
+                    Already have an account? <a href="login.html" style="color:#F05A28;">Log In</a>
+                </p>
+
+                <br />
+            </div>
+        </div>
+
+        <!--start footer-->
+        <span class="footer">
+            Copyright &#169 1996-2016 Adobe Digital Learning Services. All Rights Reserved.
+            <span style="float: right"> <a href="sitemap.html">Site Map</a></span>
+        </span>
+        <!--end footer-->
+    </div>
+
+    <script>
+        function handleSignup(e) {
+            e.preventDefault();
+
+            var data = {
+                username: document.getElementById("su_username").value.trim(),
+                fullName: document.getElementById("su_fullName").value.trim(),
+                email: document.getElementById("su_email").value.trim(),
+                password: document.getElementById("su_password").value,
+                phone: document.getElementById("su_phone").value.trim(),
+                customerType: document.getElementById("su_customerType").value,
+                loyaltyStatus: document.getElementById("su_loyaltyStatus").value,
+                address: document.getElementById("su_address").value.trim(),
+                city: document.getElementById("su_city").value.trim(),
+                country: document.getElementById("su_country").value
+            };
+
+            var result = GeoAuth.signup(data);
+            var msgEl = document.getElementById("signupMsg");
+
+            if (result.success) {
+                window.adobeDataLayer = window.adobeDataLayer || [];
+                window.adobeDataLayer.push({
+                    event: "signup",
+                    link: {
+                        linkName: "sign up"
+                    }
+                });
+
+                msgEl.className = "signup-msg success";
+                msgEl.innerHTML = result.message + " Your User ID: <strong>" + result.user.userId + "</strong>";
+                document.getElementById("signupForm").reset();
+                // Redirect to login after 2 seconds
+                setTimeout(function () {
+                    window.location.href = "login.html";
+                }, 2500);
+            } else {
+                msgEl.className = "signup-msg error";
+                msgEl.textContent = result.message;
+            }
+
+            return false;
+        }
+    </script>
+
+    <!--Place DTM footer below this-->
+    <script type="text/javascript">
+        if (typeof _satellite !== "undefined") { _satellite.pageBottom(); }
+    </script>
+    <!--Place DTM footer above this-->
+</body>
+
+</html>

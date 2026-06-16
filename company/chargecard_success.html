@@ -1,0 +1,592 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <!--Place DTM header below this-->
+
+    <script src="https://assets.adobedtm.com/091296e21369/0bfdfe414e0c/launch-ea04ad1ac377-development.min.js" async></script>
+
+    <!--Place DTM header above this-->
+    <script src="../scripts/auth.js"></script>
+    <script>
+        window.adobeDataLayer = window.adobeDataLayer || [];
+        window.adobeDataLayer.push({
+          event: "pageView",
+          page: {
+            pageName: "Company:Geo Charge Card Success",
+            pageUrl: window.location.href,
+            pageType: "content",
+            language: "en",
+            pageCategory: "Company",
+            SiteSection1: "Company",
+            siteSection2: "Geo Charge Card Success",
+            siteSection3: "",
+            referrer: document.referrer,
+            is404: false,
+          },
+          user: GeoAuth.getUserDataLayer()
+        });
+
+        // Push charge card application complete event
+        window.adobeDataLayer.push({
+            event: "chargeCardApplicationComplete",
+            application: {
+                type: "Geo Charge Card",
+                status: "approved"
+            }
+        });
+
+        window.adobeDataLayer.push({
+            event: "formComplete",
+            form: {
+                formName: "Charge Card Application"
+            }
+        });
+    </script>
+
+
+    <title>Geometrixx|Company|Geo Charge Card — Application Approved</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <script type="text/javascript" src="../scripts/menu.js"></script>
+    <script type="text/javascript" src="../scripts/simpleCart.js"></script>
+
+    <style type="text/css">
+    </style>
+    <link rel="stylesheet" href="../css/jje.css">
+    <link rel="stylesheet" href="../css/menu.css">
+
+    <style>
+        #wrapper {
+            height: auto;
+            min-height: 650px;
+            overflow: visible;
+        }
+
+        .success-container {
+            text-align: center;
+            padding: 20px 20px 30px;
+            max-width: 750px;
+            margin: 10px auto 0;
+        }
+
+        .success-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: #2ecc40;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+        }
+
+        .success-icon svg {
+            width: 34px;
+            height: 34px;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes fadeUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .success-title {
+            font: bold 22px Helvetica, Arial, sans-serif;
+            color: #222;
+            margin: 0 0 4px;
+            animation: fadeUp 0.5s 0.2s both;
+        }
+
+        .success-subtitle {
+            font: 14px Helvetica, Arial, sans-serif;
+            color: #666;
+            margin: 0 0 18px;
+            animation: fadeUp 0.5s 0.3s both;
+        }
+
+        .card-preview {
+            position: relative;
+            width: 300px;
+            height: 175px;
+            margin: 0 auto 20px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #F05A28 0%, #d44a1f 50%, #a83618 100%);
+            box-shadow: 0 8px 28px rgba(240, 90, 40, 0.3);
+            color: #fff;
+            text-align: left;
+            padding: 18px 22px;
+            overflow: hidden;
+            animation: fadeUp 0.5s 0.4s both;
+        }
+
+        .card-preview::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .card-preview::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: -30px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .card-brand {
+            font: bold 15px Helvetica, Arial, sans-serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .card-chip {
+            width: 34px;
+            height: 26px;
+            border-radius: 4px;
+            background: linear-gradient(135deg, #e6c65a, #c9a832);
+            margin-bottom: 12px;
+        }
+
+        .card-number {
+            font: 15px 'Courier New', Courier, monospace;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+        }
+
+        .card-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .card-holder-label, .card-expiry-label {
+            font: 8px Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.7;
+            margin-bottom: 2px;
+        }
+
+        .card-holder-name, .card-expiry-date {
+            font: bold 13px Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .details-box {
+            background: #f7f7f7;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 14px 22px;
+            text-align: left;
+            margin: 0 auto 18px;
+            max-width: 400px;
+            animation: fadeUp 0.5s 0.55s both;
+        }
+
+        .details-box h3 {
+            font: bold 13px Helvetica, Arial, sans-serif;
+            color: #333;
+            margin: 0 0 8px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .details-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 3px 0;
+            font: 12px Helvetica, Arial, sans-serif;
+        }
+
+        .details-label {
+            color: #888;
+        }
+
+        .details-value {
+            color: #222;
+            font-weight: 600;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #2ecc40;
+            color: #fff;
+            font: bold 11px Helvetica, Arial, sans-serif;
+            padding: 3px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .success-actions {
+            animation: fadeUp 0.5s 0.65s both;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: #F05A28;
+            color: #fff;
+            font: bold 13px Helvetica, Arial, sans-serif;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 0 6px;
+            transition: background 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: #d44a1f;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background: #fff;
+            color: #F05A28;
+            font: bold 13px Helvetica, Arial, sans-serif;
+            padding: 9px 24px;
+            border: 2px solid #F05A28;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 0 6px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: #F05A28;
+            color: #fff;
+        }
+
+        .confetti {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: -20px;
+            opacity: 0;
+            animation: confettiFall 3s ease-in forwards;
+        }
+
+        @keyframes confettiFall {
+            0% { opacity: 1; transform: translateY(0) rotate(0deg); }
+            100% { opacity: 0; transform: translateY(100vh) rotate(720deg); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Confetti animation -->
+    <div class="confetti" id="confetti"></div>
+
+    <div id="superwrap">
+        <div id="wrapper">
+            <!--start logo and head-->
+
+            <div class="head_logo">
+                <a href="../index.html">
+                    <img src="../images/geomterixx-logo.png" border="0" name="jj" />
+                </a>
+                <br />
+            </div>
+
+            <!--start search box-->
+
+            <div class="rightheader">
+
+                <div class="search_box">
+
+                    <form action="../search/searchresults.html">
+                        <input type="text" id="searchfield" name="q" />
+                        <input type="submit" Value="Go" class="button">
+                    </form>
+                </div>
+
+                <div class="checkout"><a href="../checkout/shoppingcart.html">shopping cart</a>
+                    <a href="../checkout/shipping1.html">checkout</a>
+                    <a href="../videoblogs/videoblogs.html">video blogs</a>
+                    <a href="../login.html">login</a>
+                    <a href="../signup.html">sign up</a>
+                </div>
+            </div>
+            <!--end search box-->
+
+            <!--end logo and head-->
+
+
+            <!--start top nav-->
+
+            <table width=800>
+                <tr>
+                    <div class="head_tabs_bar">
+                        <div id="menu">
+                            <!--Menu Start-->
+                            <ul id="sddm">
+
+                                <li><a href="../women/women.html" onmouseover="mopen('m2')" onmouseout="mclosetime()">WOMEN</a>
+                                    <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="../women/activewear/activewear.html">Activewear</a>
+
+                                        <a href="../women/fineapparel/fineapparel.html">Fine Apparel</a>
+                                        <a href="#">Footwear</a>
+                                        <a href="#">Handbags</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="../men/men.html" onmouseover="mopen('m3')" onmouseout="mclosetime()">MEN</a>
+                                    <div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+
+                                        <a href="../men/activewear/activewear.html">Activewear</a>
+                                        <a href="../men/fineapparel/fineapparel.html">Fine Apparel</a>
+                                        <a href="#">Footwear</a>
+                                        <a href="#">Accessories</a>
+                                    </div>
+                                </li>
+                                <li><a href="#" onmouseover="mopen('m4')" onmouseout="mclosetime()">JEWELRY</a>
+
+                                    <div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="#">Anniversary</a>
+                                        <a href="#">Broaches</a>
+                                        <a href="#">Forgive Me</a>
+                                        <a href="#">Necklaces</a>
+                                        <a href="#">Rings</a>
+                                        <a href="#">Watches</a>
+                                    </div>
+
+                                </li>
+                                <li><a href="#" onmouseover="mopen('m5')" onmouseout="mclosetime()">HOME</a>
+                                    <div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="#">Artwork</a>
+                                        <a href="#">Bed & Bath</a>
+                                        <a href="#">Chotskies</a>
+                                        <a href="#">Floor Clocks</a>
+
+                                        <a href="#">Furniture</a>
+                                        <a href="#">Gourmet Food</a>
+                                        <a href="#">Home Scents</a>
+                                        <a href="#">Kitchen</a>
+                                        <a href="#">Lighting</a>
+                                        <a href="#">Patio & Garden</a>
+                                        <a href="#">Wall Decor</a>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" onmouseover="mopen('m6')" onmouseout="mclosetime()">CHILDREN</a>
+                                    <div id="m6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="#">Accessories</a>
+                                        <a href="#">Apparel</a>
+                                        <a href="#">Bed & Bath</a>
+                                        <a href="#">Shoes</a>
+
+                                        <a href="#">Toys</a>
+                                    </div>
+                                </li>
+                                <li><a href="#" onmouseover="mopen('m7')" onmouseout="mclosetime()">ELECTRONICS</a>
+                                    <div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="#">Audio</a>
+                                        <a href="#">Cameras</a>
+                                        <a href="#">Computers</a>
+                                        <a href="#">Gadgets</a>
+
+                                        <a href="#">Home Appliance</a>
+                                        <a href="#">Home Theater</a>
+                                        <a href="#">TV & Video</a>
+                                    </div>
+                                    <li>
+                                        <a href="../company/company.html" onmouseover="mopen('m8')" onmouseout="mclosetime()">COMPANY</a>
+                                        <div id="m8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                            <a href="../company/chargecard_application1.html">Geo Charge Card</a>
+
+                                            <a href="../company/travel1.html">Geo Travel</a>
+                                            <a href="../company/newsletter1.html">Geo Newsletter</a>
+                                            <a href="../company/activation_dtm.html">Activation (DTM)</a>
+                                            <a href="../company/whitepapers.html">White Papers</a>
+                                        </div>
+                                    </li>
+                                </li>
+                            </ul>
+
+                            <!--Menu End-->
+                        </div>
+                    </div>
+
+                    <br clear="all">
+                </tr>
+            </table>
+            <!--end top nav-->
+
+
+            <!---------------------->
+            <!--start page content-->
+            <!---------------------->
+
+            <div class="success-container">
+
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+
+                <h1 class="success-title">Congratulations!</h1>
+                <p class="success-subtitle">Your Geometrixx Charge Card application has been approved.</p>
+
+                <!-- Card Preview -->
+                <div class="card-preview">
+                    <div class="card-brand">Geometrixx</div>
+                    <div class="card-chip"></div>
+                    <div class="card-number" id="cardNumber">•••• •••• •••• ••••</div>
+                    <div class="card-bottom">
+                        <div>
+                            <div class="card-holder-label">Card Holder</div>
+                            <div class="card-holder-name" id="cardHolder">VALUED MEMBER</div>
+                        </div>
+                        <div>
+                            <div class="card-expiry-label">Expires</div>
+                            <div class="card-expiry-date" id="cardExpiry">--/--</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Application Details -->
+                <div class="details-box">
+                    <h3>Application Details</h3>
+                    <div class="details-row">
+                        <span class="details-label">Application ID</span>
+                        <span class="details-value" id="appId">—</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="details-label">Card Type</span>
+                        <span class="details-value">Geo Charge Card</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="details-label">Credit Limit</span>
+                        <span class="details-value" id="creditLimit">—</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="details-label">Annual Fee</span>
+                        <span class="details-value">$0</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="details-label">Status</span>
+                        <span class="details-value"><span class="status-badge">Approved</span></span>
+                    </div>
+                </div>
+
+                <div class="success-actions">
+                    <a href="../index.html" class="btn-primary">Start Shopping</a>
+                    <a href="../company/company.html" class="btn-secondary">Back to Company</a>
+                </div>
+
+            </div>
+
+            <!---------------------->
+            <!--end page content-->
+            <!---------------------->
+
+        </div>
+
+        <!--start footer-->
+        <span class="footer">
+Copyright &#169 1996-2016 Adobe Digital Learning Services. All Rights Reserved.
+<span style="float: right"> <a href="../sitemap.html">Site Map</a>
+</span>
+        </span>
+    </div>
+    <!--End footer-->
+
+    <!--Place DTM footer below this-->
+
+    <script type="text/javascript">
+        if (typeof _satellite !== "undefined") { _satellite.pageBottom(); }
+    </script>
+
+    <!--Place DTM footer above this-->
+
+    <script>
+        // Generate card details on load
+        (function() {
+            // Application ID
+            var appId = 'GEO-' + Date.now().toString(36).toUpperCase().slice(-6) + '-' + Math.random().toString(36).substring(2, 6).toUpperCase();
+            document.getElementById('appId').textContent = appId;
+
+            // Card number (masked, last 4 random)
+            var last4 = Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('cardNumber').textContent = '4729  ••••  ••••  ' + last4;
+
+            // Cardholder name from referrer form data or default
+            var holder = 'VALUED MEMBER';
+            try {
+                var params = new URLSearchParams(window.location.search);
+                var fn = params.get('firstname');
+                var ln = params.get('lastname');
+                if (fn && ln) {
+                    holder = (fn + ' ' + ln).toUpperCase();
+                }
+            } catch(e) {}
+            document.getElementById('cardHolder').textContent = holder;
+
+            // Expiry — 3 years from now
+            var now = new Date();
+            var expMonth = ('0' + (now.getMonth() + 1)).slice(-2);
+            var expYear = (now.getFullYear() + 3).toString().slice(-2);
+            document.getElementById('cardExpiry').textContent = expMonth + '/' + expYear;
+
+            // Credit limit
+            var limits = ['$5,000', '$7,500', '$10,000', '$15,000', '$20,000'];
+            document.getElementById('creditLimit').textContent = limits[Math.floor(Math.random() * limits.length)];
+
+            // Confetti
+            var confettiContainer = document.getElementById('confetti');
+            var colors = ['#F05A28', '#2ecc40', '#3498db', '#f1c40f', '#e74c3c', '#9b59b6', '#1abc9c'];
+            for (var i = 0; i < 60; i++) {
+                var piece = document.createElement('div');
+                piece.className = 'confetti-piece';
+                piece.style.left = Math.random() * 100 + '%';
+                piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                piece.style.animationDelay = (Math.random() * 2) + 's';
+                piece.style.animationDuration = (2 + Math.random() * 2) + 's';
+                piece.style.width = (6 + Math.random() * 8) + 'px';
+                piece.style.height = (6 + Math.random() * 8) + 'px';
+                piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+                confettiContainer.appendChild(piece);
+            }
+
+            // Remove confetti after animation
+            setTimeout(function() {
+                confettiContainer.style.display = 'none';
+            }, 5000);
+        })();
+    </script>
+
+</body>
+
+</html>

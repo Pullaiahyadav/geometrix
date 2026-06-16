@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!--Place DTM header below this-->
+    <script src="https://assets.adobedtm.com/091296e21369/0bfdfe414e0c/launch-ea04ad1ac377-development.min.js" async></script>
+    <!--Place DTM header above this-->
+
+    <script src="scripts/auth.js"></script>
+    <script>
+        window.adobeDataLayer = window.adobeDataLayer || [];
+        window.adobeDataLayer.push({
+          event: "pageView",
+          page: {
+            pageName: "Login",
+            pageUrl: window.location.href,
+            pageType: "content",
+            language: "en",
+            pageCategory: "Login",
+            SiteSection1: "Login",
+            siteSection2: "",
+            siteSection3: "",
+            referrer: document.referrer,
+            is404: false,
+          },
+          user: GeoAuth.getUserDataLayer()
+        });
+    </script>
+
+    <title>Login - Geometrixx Clothiers</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/simpleCart.js"></script>
+
+    <link rel="stylesheet" href="css/jje.css">
+    <link rel="stylesheet" href="css/menu.css">
+
+    <style>
+        .login-form {
+            margin: 10px 0 20px 20px;
+            max-width: 420px;
+        }
+        .login-form td {
+            padding: 6px 4px;
+            vertical-align: middle;
+        }
+        .login-form .label-cell {
+            width: 120px;
+            text-align: right;
+            padding-right: 10px;
+            font: bold 14px Helvetica, Arial;
+            color: #4D4D4D;
+        }
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 6px 8px;
+            border: 2px solid #4D4D4D;
+            background: #4D4D4D;
+            color: #fff;
+            font: 14px Verdana;
+            box-sizing: border-box;
+        }
+        .login-msg {
+            font: 16px Verdana;
+            margin: 10px 0 0 20px;
+            min-height: 24px;
+        }
+        .login-msg.success { color: #2e7d32; }
+        .login-msg.error { color: #c62828; }
+    </style>
+</head>
+
+<body>
+    <div id="superwrap">
+        <div id="wrapper">
+            <!--start logo and head-->
+            <div class="head_logo">
+                <a href="index.html"><img src="./images/geomterixx-logo.png" border="0" name="jj" /></a>
+                <br />
+            </div>
+
+            <!--start search box-->
+            <div class="rightheader">
+                <span class="search_box">
+                    <form action="search/searchresults.html">
+                        <input type="text" id="searchfield" name="q" />
+                        <input type="submit" Value="Go" class="button">
+                    </form>
+                </span>
+                <div class="checkout">
+                    <a href="checkout/shoppingcart.html">shopping cart</a>
+                    <a href="checkout/shipping1.html">checkout</a>
+                    <a href="videoblogs/videoblogs.html">video blogs</a>
+                    <a href="login.html">login</a>
+                    <a href="signup.html">sign up</a>
+                </div>
+            </div>
+            <!--end search box-->
+
+            <!--start top nav-->
+            <table width=800>
+                <tr>
+                    <div class="head_tabs_bar">
+                        <div id="menu">
+                            <ul id="sddm">
+                                <li><a href="women/women.html" onmouseover="mopen('m2')" onmouseout="mclosetime()">WOMEN</a>
+                                    <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="women/activewear/activewear.html">Activewear</a>
+                                        <a href="women/fineapparel/fineapparel.html">Fine Apparel</a>
+                                        <a href="#">Footwear</a>
+                                        <a href="#">Handbags</a>
+                                    </div>
+                                </li>
+                                <li><a href="men/men.html" onmouseover="mopen('m3')" onmouseout="mclosetime()">MEN</a>
+                                    <div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="men/activewear/activewear.html">Activewear</a>
+                                        <a href="men/fineapparel/fineapparel.html">Fine Apparel</a>
+                                        <a href="#">Footwear</a>
+                                        <a href="#">Accessories</a>
+                                    </div>
+                                </li>
+                                <li><a href="#" onmouseover="mopen('m4')" onmouseout="mclosetime()">JEWELRY</a>
+                                    <div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="#">Anniversary</a>
+                                        <a href="#">Broaches</a>
+                                        <a href="#">Forgive Me</a>
+                                        <a href="#">Necklaces</a>
+                                        <a href="#">Rings</a>
+                                        <a href="#">Watches</a>
+                                    </div>
+                                </li>
+                                <li><a href="#" onmouseover="mopen('m5')" onmouseout="mclosetime()">HOME</a>
+                                    <div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="#">Artwork</a>
+                                        <a href="#">Bed & Bath</a>
+                                        <a href="#">Chotskies</a>
+                                        <a href="#">Floor Clocks</a>
+                                        <a href="#">Furniture</a>
+                                        <a href="#">Gourmet Food</a>
+                                        <a href="#">Home Scents</a>
+                                        <a href="#">Kitchen</a>
+                                        <a href="#">Lighting</a>
+                                        <a href="#">Patio & Garden</a>
+                                        <a href="#">Wall Decor</a>
+                                    </div>
+                                </li>
+                                <li><a href="#" onmouseover="mopen('m6')" onmouseout="mclosetime()">CHILDREN</a>
+                                    <div id="m6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="#">Accessories</a>
+                                        <a href="#">Apparel</a>
+                                        <a href="#">Bed & Bath</a>
+                                        <a href="#">Shoes</a>
+                                        <a href="#">Toys</a>
+                                    </div>
+                                </li>
+                                <li><a href="#" onmouseover="mopen('m7')" onmouseout="mclosetime()">ELECTRONICS</a>
+                                    <div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                        <a href="#">Audio</a>
+                                        <a href="#">Cameras</a>
+                                        <a href="#">Computers</a>
+                                        <a href="#">Gadgets</a>
+                                        <a href="#">Home Appliance</a>
+                                        <a href="#">Home Theater</a>
+                                        <a href="#">TV & Video</a>
+                                    </div>
+                                    <li><a href="company/company.html" onmouseover="mopen('m8')" onmouseout="mclosetime()">COMPANY</a>
+                                        <div id="m8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                            <a href="company/chargecard_application1.html">Geo Charge Card</a>
+                                            <a href="company/travel1.html">Geo Travel</a>
+                                            <a href="company/newsletter1.html">Geo Newsletter</a>
+                                            <a href="company/activation_dtm.html">Activation (DTM)</a>
+                                            <a href="company/whitepapers.html">White Papers</a>
+                                        </div>
+                                    </li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <br clear="all">
+                </tr>
+            </table>
+            <!--end top nav-->
+
+            <!--start page content-->
+            <div style="margin:6px 0px 0px -3px;">
+
+                <div id="loginSection">
+                    <span class="description">Log into Geometrixx</span>
+                    <br /><br />
+
+                    <div class="login-form">
+                        <form id="loginForm" onsubmit="return handleLogin(event);">
+                            <table>
+                                <tr>
+                                    <td class="label-cell">Username:</td>
+                                    <td><input type="text" id="login_username" name="username" required /></td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Password:</td>
+                                    <td><input type="password" id="login_password" name="password" required /></td>
+                                </tr>
+                                <tr><td colspan="2">&nbsp;</td></tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <input type="submit" value="Log In" class="button" style="padding:6px 20px; font-size:14px;" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+
+                    <div class="login-msg" id="loginMsg"></div>
+
+                    <p style="margin-left:20px; font:14px Helvetica,Arial; color:#4D4D4D;">
+                        Don't have an account? <a href="signup.html" style="color:#F05A28;">Sign Up</a>
+                    </p>
+                </div>
+
+                <div id="loggedInSection" style="display:none;">
+                    <span class="description">Welcome back!</span>
+                    <br /><br />
+
+                    <div style="margin-left:20px; font:16px Verdana; color:#F05A28;">
+                        <span id="welcomeMsg"></span>
+                    </div>
+                    <br />
+                    <div style="margin-left:20px;">
+                        <input type="button" value="Log Out" class="button" style="padding:6px 20px; font-size:14px;" onclick="handleLogout()" />
+                    </div>
+                </div>
+
+                <br />
+            </div>
+        </div>
+
+        <!--start footer-->
+        <span class="footer">
+            Copyright &#169 1996-2016 Adobe Digital Learning Services. All Rights Reserved.
+            <span style="float: right"> <a href="sitemap.html">Site Map</a></span>
+        </span>
+        <!--end footer-->
+    </div>
+
+    <script>
+        // Check if already logged in on page load
+        (function () {
+            var user = GeoAuth.getLoggedInUser();
+            if (user) {
+                document.getElementById("loginSection").style.display = "none";
+                document.getElementById("loggedInSection").style.display = "block";
+                document.getElementById("welcomeMsg").textContent =
+                    "Welcome to Geometrixx, " + user.username + "! You're logged in.";
+            }
+        })();
+
+        function handleLogin(e) {
+            e.preventDefault();
+            var username = document.getElementById("login_username").value.trim();
+            var password = document.getElementById("login_password").value;
+
+            var result = GeoAuth.login(username, password);
+            var msgEl = document.getElementById("loginMsg");
+
+            if (result.success) {
+                msgEl.className = "login-msg success";
+                msgEl.textContent = result.message;
+
+                // Push login event to adobeDataLayer
+                window.adobeDataLayer = window.adobeDataLayer || [];
+                window.adobeDataLayer.push({
+                    event: "userLogin",
+                    user: GeoAuth.getUserDataLayer()
+                });
+
+                window.adobeDataLayer.push({
+                    event: "login",
+                    link: {
+                        linkName: "Login"
+                    }
+                });
+
+                // Show logged-in state
+                document.getElementById("loginSection").style.display = "none";
+                document.getElementById("loggedInSection").style.display = "block";
+                document.getElementById("welcomeMsg").textContent =
+                    "Welcome to Geometrixx, " + result.user.username + "! You're logged in.";
+            } else {
+                msgEl.className = "login-msg error";
+                msgEl.textContent = result.message;
+            }
+
+            return false;
+        }
+
+        function handleLogout() {
+            GeoAuth.logout();
+
+            // Push logout event to adobeDataLayer
+            window.adobeDataLayer = window.adobeDataLayer || [];
+            window.adobeDataLayer.push({
+                event: "userLogout",
+                user: GeoAuth.getUserDataLayer()
+            });
+
+            document.getElementById("loggedInSection").style.display = "none";
+            document.getElementById("loginSection").style.display = "block";
+            document.getElementById("loginMsg").className = "login-msg success";
+            document.getElementById("loginMsg").textContent = "You have been logged out.";
+        }
+    </script>
+
+    <!--Place DTM footer below this-->
+    <script type="text/javascript">
+        if (typeof _satellite !== "undefined") { _satellite.pageBottom(); }
+    </script>
+    <!--Place DTM footer above this-->
+
+</body>
+
+</html>
