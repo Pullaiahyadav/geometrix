@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geometrixx Clothiers — Event DataLayer Reference</title>
+    <style>
+        @media print {
+            body { margin: 0.5in; }
+            .no-break { page-break-inside: avoid; }
+            h1 { page-break-after: avoid; }
+            h2 { page-break-after: avoid; }
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #222;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 30px;
+            line-height: 1.5;
+        }
+        h1 {
+            color: #F05A28;
+            border-bottom: 3px solid #F05A28;
+            padding-bottom: 8px;
+            margin-bottom: 4px;
+            font-size: 26px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+            background: #f5f5f5;
+            padding: 8px 14px;
+            border-left: 4px solid #F05A28;
+            margin-top: 30px;
+            font-size: 18px;
+        }
+        .event-num {
+            color: #F05A28;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0 20px 0;
+            font-size: 13px;
+        }
+        th {
+            background: #F05A28;
+            color: #fff;
+            text-align: left;
+            padding: 8px 10px;
+            font-weight: 600;
+        }
+        td {
+            padding: 6px 10px;
+            border-bottom: 1px solid #ddd;
+            vertical-align: top;
+        }
+        tr:nth-child(even) td { background: #fafafa; }
+        code, pre {
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 12px;
+        }
+        pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 14px 18px;
+            border-radius: 6px;
+            overflow-x: auto;
+            line-height: 1.45;
+        }
+        pre .key { color: #9cdcfe; }
+        pre .str { color: #ce9178; }
+        pre .num { color: #b5cea8; }
+        pre .bool { color: #569cd6; }
+        pre .comment { color: #6a9955; font-style: italic; }
+        .trigger { color: #555; font-size: 13px; margin: 4px 0 6px 0; }
+        .trigger strong { color: #333; }
+        .file-ref { color: #888; font-size: 11px; font-style: italic; }
+        .toc { margin: 20px 0 30px 0; }
+        .toc ol { columns: 2; -webkit-columns: 2; column-gap: 30px; }
+        .toc li { margin-bottom: 4px; font-size: 14px; }
+        .toc a { text-decoration: none; color: #F05A28; }
+        .toc a:hover { text-decoration: underline; }
+        .print-btn {
+            display: inline-block;
+            background: #F05A28;
+            color: #fff;
+            padding: 10px 28px;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+        .print-btn:hover { background: #d44a1f; }
+        @media print { .print-btn { display: none; } .toc { display: none; } }
+    </style>
+</head>
+<body>
+
+<h1>Geometrixx Clothiers — Event DataLayer Reference</h1>
+<p class="subtitle">Adobe Client Data Layer (adobeDataLayer) · Generated June 5, 2026</p>
+
+<button class="print-btn" onclick="window.print()">⬇ Save / Print as PDF</button>
+
+<div class="toc">
+    <strong>Table of Contents</strong>
+    <ol>
+        <li><a href="#e1">pageView</a></li>
+        <li><a href="#e2">productView</a></li>
+        <li><a href="#e3">addtocart</a></li>
+        <li><a href="#e4">cartOpen</a></li>
+        <li><a href="#e5">cartView</a></li>
+        <li><a href="#e6">removefromcart</a></li>
+        <li><a href="#e7">checkout</a></li>
+        <li><a href="#e8">order confirmation</a></li>
+        <li><a href="#e9">search</a></li>
+        <li><a href="#e10">userLogin</a></li>
+        <li><a href="#e11">login (link click)</a></li>
+        <li><a href="#e12">userLogout</a></li>
+        <li><a href="#e13">link click</a></li>
+    </ol>
+</div>
+
+<!-- ============================================================ -->
+<!-- EVENT 1 -->
+<!-- ============================================================ -->
+<div class="no-break" id="e1">
+<h2><span class="event-num">1.</span> pageView</h2>
+<p class="trigger"><strong>Trigger:</strong> Page load — fires on every page in the &lt;head&gt; before DOM render.</p>
+<p class="file-ref">Found in: all HTML pages (index.html, login.html, 404error.html, product pages, checkout pages, etc.)</p>
+<pre>
+window.adobeDataLayer.push({
+  <span class="key">event</span>: <span class="str">"pageView"</span>,
+  <span class="key">page</span>: {
+    <span class="key">pageName</span>:      <span class="str">"Home Page"</span>,         <span class="comment">// varies per page</span>
+    <span class="key">pageUrl</span>:       window.location.href,
+    <span class="key">pageType</span>:      <span class="str">"content"</span>,            <span class="comment">// "content" | "product" | "search" | "error"</span>
+    <span class="key">language</span>:      <span class="str">"en"</span>,
+    <span class="key">pageCategory</span>:  <span class="str">"Home"</span>,               <span class="comment">// varies per page</span>
+    <span class="key">SiteSection1</span>:  <span class="str">""</span>,                   <span class="comment">// top-level section</span>
+    <span class="key">siteSection2</span>:  <span class="str">""</span>,                   <span class="comment">// sub-section</span>
+    <span class="key">siteSection3</span>:  <span class="str">""</span>,                   <span class="comment">// sub-sub-section</span>
+    <span class="key">referrer</span>:      document.referrer,
+    <span class="key">is404</span>:         <span class="bool">false</span>                <span class="comment">// true on 404error.html</span>
+  },
+  <span class="key">user</span>: GeoAuth.getUserDataLayer()   <span class="comment">// see User Object below</span>
+});
+</pre>
+
+<table>
+<tr><th>Property</th><th>Type</th><th>Example Values</th></tr>
+<tr><td>page.pageName</td><td>String</td><td>"Home Page", "Men:Fine Apparel:Blue Shirt", "Checkout:Shopping Cart", "404 Error", "Search Results"</td></tr>
+<tr><td>page.pageType</td><td>String</td><td>"content", "product", "search", "error"</td></tr>
+<tr><td>page.pageCategory</td><td>String</td><td>"Home", "Men", "Women", "Checkout", "Company", "Search", "Error", "Login", "Signup"</td></tr>
+<tr><td>page.SiteSection1</td><td>String</td><td>"Men", "Women", "Checkout", "Company", "Login", "Signup", ""</td></tr>
+<tr><td>page.siteSection2</td><td>String</td><td>"Fine Apparel", "Activewear", "Shopping Cart", "Order Confirmation Step 4", ""</td></tr>
+<tr><td>page.siteSection3</td><td>String</td><td>"Blue Shirt", "Tuxedo", ""</td></tr>
+<tr><td>page.is404</td><td>Boolean</td><td>false (true only on 404error.html)</td></tr>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<!-- EVENT 2 -->
+<!-- ============================================================ -->
+<div class="no-break" id="e2">
+<h2><span class="event-num">2.</span> productView</h2>
+<p class="trigger"><strong>Trigger:</strong> DOMContentLoaded on product detail pages (pageType === "product"). Extracts product info from DOM.</p>
+<p class="file-ref">Found in: scripts/menu.js — fires on pages like blueshirt.html, tuxedo.html, etc.</p>
+<pre>
+window.adobeDataLayer.push({
+  <span class="key">event</span>: <span class="str">"productView"</span>,
+  <span class="key">product</span>: {
+    <span class="key">id</span>:       <span class="str">"GEO_BLUSHIRT"</span>,        <span class="comment">// SKU from DOM</span>
+    <span class="key">name</span>:     <span class="str">"Blue Shirt"</span>,           <span class="comment">// product name from DOM</span>
+    <span class="key">price</span>:    <span class="num">39.99</span>,                  <span class="comment">// parsed from DOM</span>
+    <span class="key">currency</span>: <span class="str">"USD"</span>
+  }
+});
+</pre>
+
+<table>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+<tr><td>product.id</td><td>String</td><td>Product SKU extracted from page content</td></tr>
+<tr><td>product.name</td><td>String</td><td>Product name from .search_title element</td></tr>
+<tr><td>product.price</td><td>Number</td><td>Price parsed from "Price: $X.XX" pattern</td></tr>
+<tr><td>product.currency</td><td>String</td><td>Always "USD"</td></tr>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<!-- EVENT 3 -->
+<!-- ============================================================ -->
+<div class="no-break" id="e3">
+<h2><span class="event-num">3.</span> addtocart</h2>
+<p class="trigger"><strong>Trigger:</strong> User clicks "Add to Cart" button on a product page.</p>
+<p class="file-ref">Found in: scripts/simpleCart.js</p>
+<pre>
+window.adobeDataLayer.push({
+  <span class="key">event</span>: <span class="str">"addtocart"</span>,
+  <span class="key">product</span>: {
+    <span class="key">id</span>:       <span class="str">"GEO_BLUSHIRT"</span>,        <span class="comment">// SKU from button value</span>
+    <span class="key">name</span>:     <span class="str">"Blue Shirt"</span>,
+    <span class="key">price</span>:    <span class="num">39.99</span>,
+    <span class="key">currency</span>: <span class="str">"USD"</span>,
+    <span class="key">quantity</span>: <span class="num">1</span>
+  }
+});
+</pre>
+
+<table>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+<tr><td>product.id</td><td>String</td><td>SKU from the add-to-cart button value</td></tr>
+<tr><td>product.name</td><td>String</td><td>Product name</td></tr>
+<tr><td>product.price</td><td>Number</td><td>Unit price</td></tr>
+<tr><td>product.currency</td><td>String</td><td>Always "USD"</td></tr>
+<tr><td>product.quantity</td><td>Number</td><td>Always 1 per click</td></tr>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<!-- EVENT 4 -->
+<!-- ============================================================ -->
+<div class="no-break" id="e4">
+<h2><span class="event-num">4.</span> cartOpen</h2>
+<p class="trigger"><strong>Trigger:</strong> First "Add to Cart" action per session (fires once per session).</p>
+<p class="file-ref">Found in: scripts/simpleCart.js</p>
+<pre>
+window.adobeDataLayer.push({
+  <span class="key">event</span>: <span class="str">"cartOpen"</span>,
+  <span class="key">cart</span>: {
+    <span class="key">id</span>:            <span class="str">"CART_1717600000_abc123"</span>,
+    <span class="key">totalValue</span>:    <span class="num">39.99</span>,
+    <span class="key">totalQuantity</span>: <span class="num">1</span>,
+    <span class="key">currency</span>:      <span class="str">"USD"</span>
+  },
+  <span class="key">product</span>:       [<span class="comment">/* array of cart products */</span>]
+});
+</pre>
+
+<table>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+<tr><td>cart.id</td><td>String</td><td>Session-generated cart ID (CART_{timestamp}_{random})</td></tr>
+<tr><td>cart.totalValue</td><td>Number</td><td>Total cart value at time of event</td></tr>
+<tr><td>cart.totalQuantity</td><td>Number</td><td>Total item count</td></tr>
+<tr><td>cart.currency</td><td>String</td><td>Always "USD"</td></tr>
+<tr><td>product[]</td><td>Array</td><td>Array of product objects {name, id, price, quantity, category}</td></tr>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<!-- EVENT 5 -->
+<!-- ============================================================ -->
+<div class="no-break" id="e5">
+<h2><span class="event-num">5.</span> cartView</h2>
+<p class="trigger"><strong>Trigger:</strong> DOMContentLoaded on the Shopping Cart page (when cart has items).</p>
+<p class="file-ref">Found in: checkout/shoppingcart.html</p>
+<pre>
+window.adobeDataLayer.push({
+  <span class="key">event</span>: <span class="str">"cartView"</span>,
+  <span class="key">cart</span>: {
+    <span class="key">id</span>:            <span class="str">"CART_1717600000_abc123"</span>,
+    <span class="key">currency</span>:      <span class="str">"USD"</span>,
+    <span class="key">totalPrice</span>:    <span class="num">129.97</span>,
+    <span class="key">totalQuantity</span>: <span class="num">3</span>
+  },
+  <span class="key">product</span>: [
+      { <span class="key">name</span>: <span class="str">"Blue Shirt"</span>, <span class="key">id</span>: <span class="str">"GEO_BLUSHIRT"</span>, <span class="key">price</span>: <span class="num">39.99</span>, <span class="key">quantity</span>: <span class="num">1</span>, <span class="key">category</span>: <span class="str">"Apparel"</span> }
+  ]
+});
+</pre>
+
+<table>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+<tr><td>cart.id</td><td>String</td><td>Session cart ID</td></tr>
+<tr><td>cart.currency</td><td>String</td><td>Always "USD"</td></tr>
+<tr><td>cart.totalPrice</td><td>Number</td><td>Sum of all items × quantities</td></tr>
+<tr><td>cart.totalQuantity</td><td>Number</td><td>Total item count in cart</td></tr>
+<tr><td>product[].name</td><td>String</td><td>Product name</td></tr>
+<tr><td>product[].id</td><td>String</td><td>Product SKU</td></tr>
+<tr><td>product[].price</td><td>Number</td><td>Unit price</td></tr>
+<tr><td>product[].quantity</td><td>Number</td><td>Quantity in cart</td></tr>
+<tr><td>product[].category</td><td>String</td><td>Always "Apparel"</td></tr>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<!-- EVENT 6 -->
+<!-- ============================================================ -->
+<div class="no-break" id="e6">
+<h2><span class="event-num">6.</span> removefromcart</h2>
+<p class="trigger"><strong>Trigger:</strong> User clicks "Empty Cart" (removes all items).</p>
+<p class="file-ref">Found in: scripts/simpleCart.js</p>
+<pre>
+window.adobeDataLayer.push({
+  <span class="key">event</span>: <span class="str">"removefromcart"</span>,
+  <span class="key">cart</span>: {
+    <span class="key">id</span>:            <span class="str">"CART_1717600000_abc123"</span>,
+    <span class="key">totalValue</span>:    <span class="num">129.97</span>,
+    <span class="key">totalQuantity</span>: <span class="num">3</span>,
+    <span class="key">currency</span>:      <span class="str">"USD"</span>
+  },
+  <span class="key">product</span>:       [<span class="comment">/* products that were removed */</span>]
+});
+</pre>
+
+<table>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+<tr><td>cart.id</td><td>String</td><td>Session cart ID</td></tr>
+<tr><td>cart.totalValue</td><td>Number</td><td>Cart value before removal</td></tr>
+<tr><td>cart.totalQuantity</td><td>Number</td><td>Cart quantity before removal</td></tr>
+<tr><td>cart.currency</td><td>String</td><td>Always "USD"</td></tr>
+<tr><td>product[]</td><td>Array</td><td>Products that were in the cart at time of removal</td></tr>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<!-- EVENT 7 -->
+<!-- ============================================================ -->
+<div class="no-break" id="e7">
+<h2><span class="event-num">7.</span> checkout</h2>
+<p class="trigger"><strong>Trigger:</strong> User clicks "Place Order" on the Shopping Cart page.</p>
+<p class="file-ref">Found in: checkout/shoppingcart.html</p>
+<pre>
+window.adobeDataLayer.push({
+  <span class="key">event</span>: <span class="str">"checkout"</span>,
+  <span class="key">checkout</span>: {
+    <span class="key">id</span>:            <span class="str">"CART_1717600000_abc123"</span>,
+    <span class="key">currency</span>:      <span class="str">"USD"</span>,
+    <span class="key">totalPrice</span>:    <span class="num">129.97</span>,
+    <span class="key">totalQuantity</span>: <span class="num">3</span>
+  },
+  <span class="key">product</span>: [
+      { <span class="key">name</span>: <span class="str">"Blue Shirt"</span>, <span class="key">id</span>: <span class="str">"GEO_BLUSHIRT"</span>, <span class="key">price</span>: <span class="num">39.99</span>, <span class="key">quantity</span>: <span class="num">1</span>, <span class="key">category</span>: <span class="str">"Apparel"</span> }
+  ]
+});
+</pre>
+
+<table>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+<tr><td>checkout.id</td><td>String</td><td>Session cart ID</td></tr>
+<tr><td>checkout.currency</td><td>String</td><td>Always "USD"</td></tr>
+<tr><td>checkout.totalPrice</td><td>Number</td><td>Order total</td></tr>
+<tr><td>checkout.totalQuantity</td><td>Number</td><td>Total items</td></tr>
+<tr><td>product[]</td><td>Array</td><td>Same product structure as cartView</td></tr>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<!-- EVENT 8 -->
+<!-- ============================================================ -->
+<div class="no-break" id="e8">
+<h2><span class="event-num">8.</span> order confirmation</h2>
+<p class="trigger"><strong>Trigger:</strong> Order confirmation page load (after successful purchase). Fires on both credit card and COD confirmation pages.</p>
+<p class="file-ref">Found in: checkout/confirmreceipt4.html, checkout/confirmreceipt_cod.html</p>
+<pre>
+window.adobeDataLayer.push({
+  <span class="key">event</span>: <span class="str">"order confirmation"</span>,
+  <span class="key">order</span>: {
+    <span class="key">id</span>:             <span class="str">"ORD_1717600000_abc123"</span>,
+    <span class="key">currency</span>:       <span class="str">"USD"</span>,
+    <span class="key">totalPrice</span>:     <span class="num">129.97</span>,
+    <span class="key">totalQuantity</span>:  <span class="num">3</span>,
+    <span class="key">shippingMethod</span>: <span class="str">"Standard"</span>,           <span class="comment">// or "COD"</span>
+    <span class="key">postalCode</span>:     <span class="str">"90210"</span>,
+    <span class="key">paymentMethod</span>:  <span class="str">"Visa"</span>               <span class="comment">// or "COD"</span>
+  },
+  <span class="key">product</span>: [
+      { <span class="key">name</span>: <span class="str">"Blue Shirt"</span>, <span class="key">id</span>: <span class="str">"GEO_BLUSHIRT"</span>, <span class="key">price</span>: <span class="num">39.99</span>, <span class="key">quantity</span>: <span class="num">1</span>, <span class="key">category</span>: <span class="str">"Apparel"</span> }
+  ]
+});
+</pre>
+
+<table>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+<tr><td>order.id</td><td>String</td><td>Generated order ID from session storage</td></tr>
+<tr><td>order.currency</td><td>String</td><td>Always "USD"</td></tr>
+<tr><td>order.totalPrice</td><td>Number</td><td>Order total</td></tr>
+<tr><td>order.totalQuantity</td><td>Number</td><td>Total items ordered</td></tr>
+<tr><td>order.shippingMethod</td><td>String</td><td>Delivery type selected; defaults to "COD" on COD page</td></tr>
+<tr><td>order.postalCode</td><td>String</td><td>Shipping postal code</td></tr>
+<tr><td>order.paymentMethod</td><td>String</td><td>Payment method; hard-coded "COD" on COD page</td></tr>
+<tr><td>product[]</td><td>Array</td><td>Same product structure as cartView</td></tr>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<!-- EVENT 9 -->
+<!-- ============================================================ -->
+<div class="no-break" id="e9">
+<h2><span class="event-num">9.</span> search</h2>
+<p class="trigger"><strong>Trigger:</strong> Search Results page load when a valid search term exists in the URL.</p>
+<p class="file-ref">Found in: search/searchresults.html</p>
+<pre>
+window.adobeDataLayer.push({
+  <span class="key">event</span>: <span class="str">"search"</span>,
+  <span class="key">search</span>: {
+    <span class="key">searchTerm</span>:   <span class="str">"blue shirt"</span>,
+    <span class="key">searchType</span>:   <span class="str">"internal"</span>,       <span class="comment">// determined from referrer</span>
+    <span class="key">method</span>:       <span class="str">"enter"</span>            <span class="comment">// from URL param or default "enter"</span>
+  }
+});
+</pre>
+
+<table>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+<tr><td>search.searchTerm</td><td>String</td><td>User's search query</td></tr>
+<tr><td>search.searchType</td><td>String</td><td>"internal", "search results", "search engine", "women", "men", "checkout", "company", "login", "signup", "404 error", "home"</td></tr>
+<tr><td>search.method</td><td>String</td><td>Search method — "enter" (default) or from URL parameter</td></tr>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<!-- EVENT 10 -->
+<!-- ============================================================ -->
+<div class="no-break" id="e10">
+<h2><span class="event-num">10.</span> userLogin</h2>
+<p class="trigger"><strong>Trigger:</strong> Successful user login (after credentials validation).</p>
+<p class="file-ref">Found in: login.html</p>
+<pre>
+window.adobeDataLayer.push({
+  <span class="key">event</span>: <span class="str">"userLogin"</span>,
+  <span class="key">user</span>: GeoAuth.getUserDataLayer()   <span class="comment">// see User Object below</span>
+});
+</pre>
+</div>
+
+<!-- ============================================================ -->
+<!-- EVENT 11 -->
+<!-- ============================================================ -->
+<div class="no-break" id="e11">
+<h2><span class="event-num">11.</span> login (link click)</h2>
+<p class="trigger"><strong>Trigger:</strong> Fires immediately after userLogin event, tracking the login action as a link click.</p>
+<p class="file-ref">Found in: login.html</p>
+<pre>
+window.adobeDataLayer.push({
+  <span class="key">event</span>: <span class="str">"login"</span>,
+  <span class="key">link</span>: {
+    <span class="key">linkName</span>: <span class="str">"Login"</span>
+  }
+});
+</pre>
+</div>
+
+<!-- ============================================================ -->
+<!-- EVENT 12 -->
+<!-- ============================================================ -->
+<div class="no-break" id="e12">
+<h2><span class="event-num">12.</span> userLogout</h2>
+<p class="trigger"><strong>Trigger:</strong> User clicks the logout button.</p>
+<p class="file-ref">Found in: login.html</p>
+<pre>
+window.adobeDataLayer.push({
+  <span class="key">event</span>: <span class="str">"userLogout"</span>,
+  <span class="key">user</span>: GeoAuth.getUserDataLayer()   <span class="comment">// see User Object below</span>
+});
+</pre>
+</div>
+
+<!-- ============================================================ -->
+<!-- EVENT 13 -->
+<!-- ============================================================ -->
+<div class="no-break" id="e13">
+<h2><span class="event-num">13.</span> link click</h2>
+<p class="trigger"><strong>Trigger:</strong> User clicks global CTAs (header links), footer CTAs, or menu navigation links.</p>
+<p class="file-ref">Found in: scripts/menu.js</p>
+<pre>
+window.adobeDataLayer.push({
+  <span class="key">event</span>: <span class="str">"link click"</span>,
+  <span class="key">link</span>: {
+    <span class="key">linkName</span>:     <span class="str">"Shopping Cart"</span>,    <span class="comment">// link text content</span>
+    <span class="key">linkLocation</span>: <span class="str">"Home Page"</span>,        <span class="comment">// current page name from pageView datalayer</span>
+    <span class="key">linkType</span>:     <span class="str">"internal"</span>          <span class="comment">// "internal" | "external"</span>
+  }
+});
+</pre>
+
+<table>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+<tr><td>link.linkName</td><td>String</td><td>The anchor's visible text content</td></tr>
+<tr><td>link.linkLocation</td><td>String</td><td>Current page's pageName (from pageView event)</td></tr>
+<tr><td>link.linkType</td><td>String</td><td>"internal" (same hostname or # hrefs) or "external"</td></tr>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<!-- USER OBJECT -->
+<!-- ============================================================ -->
+<div class="no-break" id="user-obj">
+<h2>Shared: User Object — <code>GeoAuth.getUserDataLayer()</code></h2>
+<p class="trigger"><strong>Used by:</strong> pageView, userLogin, userLogout events.</p>
+<p class="file-ref">Defined in: scripts/auth.js</p>
+<pre>
+<span class="comment">// Logged-in user</span>
+{
+  <span class="key">userId</span>:        <span class="str">"USR_001"</span>,
+  <span class="key">loginStatus</span>:   <span class="str">"loggedin"</span>,
+  <span class="key">customerType</span>:  <span class="str">"consumer"</span>,
+  <span class="key">loyaltyStatus</span>: <span class="str">"guest"</span>,
+  <span class="key">loyaltyTier</span>:   <span class="str">""</span>,
+  <span class="key">country</span>:       <span class="str">"US"</span>
+}
+
+<span class="comment">// Logged-out / anonymous user</span>
+{
+  <span class="key">userId</span>:        <span class="str">""</span>,
+  <span class="key">loginStatus</span>:   <span class="str">"loggedOut"</span>,
+  <span class="key">customerType</span>:  <span class="str">"consumer"</span>,
+  <span class="key">loyaltyStatus</span>: <span class="str">"guest"</span>,
+  <span class="key">loyaltyTier</span>:   <span class="str">""</span>,
+  <span class="key">country</span>:       <span class="str">"US"</span>
+}
+</pre>
+
+<table>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+<tr><td>user.userId</td><td>String</td><td>User ID from auth system; empty if not logged in</td></tr>
+<tr><td>user.loginStatus</td><td>String</td><td>"loggedin" or "loggedOut"</td></tr>
+<tr><td>user.customerType</td><td>String</td><td>Defaults to "consumer"</td></tr>
+<tr><td>user.loyaltyStatus</td><td>String</td><td>Defaults to "guest"</td></tr>
+<tr><td>user.loyaltyTier</td><td>String</td><td>Loyalty tier; empty if none</td></tr>
+<tr><td>user.country</td><td>String</td><td>Defaults to "US"</td></tr>
+</table>
+</div>
+
+<!-- ============================================================ -->
+<!-- SUMMARY -->
+<!-- ============================================================ -->
+<div class="no-break">
+<h2>Summary Table — All Events</h2>
+<table>
+<tr><th>#</th><th>Event Name</th><th>Top-Level Key</th><th>Trigger</th><th>Source File(s)</th></tr>
+<tr><td>1</td><td>pageView</td><td>page, user</td><td>Every page load</td><td>All HTML pages</td></tr>
+<tr><td>2</td><td>productView</td><td>product</td><td>Product detail page DOMContentLoaded</td><td>scripts/menu.js</td></tr>
+<tr><td>3</td><td>addtocart</td><td>product</td><td>Add to Cart click</td><td>scripts/simpleCart.js</td></tr>
+<tr><td>4</td><td>cartOpen</td><td>cart, product</td><td>First Add to Cart per session</td><td>scripts/simpleCart.js</td></tr>
+<tr><td>5</td><td>cartView</td><td>cart, product</td><td>Shopping Cart page load (with items)</td><td>checkout/shoppingcart.html</td></tr>
+<tr><td>6</td><td>removefromcart</td><td>cart, product</td><td>Empty Cart action</td><td>scripts/simpleCart.js</td></tr>
+<tr><td>7</td><td>checkout</td><td>checkout, product</td><td>Place Order click</td><td>checkout/shoppingcart.html</td></tr>
+<tr><td>8</td><td>order confirmation</td><td>order, product</td><td>Confirmation page load</td><td>checkout/confirmreceipt4.html, confirmreceipt_cod.html</td></tr>
+<tr><td>9</td><td>search</td><td>search</td><td>Search results page (with term)</td><td>search/searchresults.html</td></tr>
+<tr><td>10</td><td>userLogin</td><td>user</td><td>Successful login</td><td>login.html</td></tr>
+<tr><td>11</td><td>login</td><td>link</td><td>After userLogin (link tracking)</td><td>login.html</td></tr>
+<tr><td>12</td><td>userLogout</td><td>user</td><td>Logout click</td><td>login.html</td></tr>
+<tr><td>13</td><td>link click</td><td>link</td><td>CTA / nav link clicks</td><td>scripts/menu.js</td></tr>
+</table>
+</div>
+
+</body>
+</html>
